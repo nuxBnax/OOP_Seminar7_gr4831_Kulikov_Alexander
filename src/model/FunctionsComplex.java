@@ -8,11 +8,16 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class FunctionsComplex implements CalculateComplex {
+public class FunctionsComplex implements Calculate {
 
 
-    public String sumComplex(Integer numA, Integer numB, Integer numA2, Integer numB2) {
+    public String sum(ArrayList<Number> list) {
         StringBuilder sB = new StringBuilder();
+        Integer numA = list.get(0).intValue();
+        Integer numB = list.get(1).intValue();
+        Integer numA2 = list.get(2).intValue();
+        Integer numB2 = list.get(3).intValue();
+
         if(numB + numB2 > 0){
             sB.append(numA + numA2)
                     .append("+")
@@ -31,8 +36,12 @@ public class FunctionsComplex implements CalculateComplex {
     /** subtractionComplex() - Функция вычисляет выражение (A + Bi) - (A2 + B2i)
      */
 
-    public String subtractionComplex(Integer numA, Integer numB, Integer numA2, Integer numB2) {
+    public String subtraction(ArrayList<Number> list) {
         StringBuilder sB = new StringBuilder();
+        Integer numA = list.get(0).intValue();
+        Integer numB = list.get(1).intValue();
+        Integer numA2 = list.get(2).intValue();
+        Integer numB2 = list.get(3).intValue();
         if(numB - numB2 > 0){
             sB.append(numA - numA2)
                     .append("+")
@@ -51,8 +60,12 @@ public class FunctionsComplex implements CalculateComplex {
     /** multiplicationComplex() - Функция вычисляет выражение (A + Bi) * (A2 + B2i)
      */
 
-    public String multiplicationComplex(Integer numA, Integer numB, Integer numA2, Integer numB2) {
+    public String multiplication(ArrayList<Number> list) {
         StringBuilder sB = new StringBuilder();
+        Integer numA = list.get(0).intValue();
+        Integer numB = list.get(1).intValue();
+        Integer numA2 = list.get(2).intValue();
+        Integer numB2 = list.get(3).intValue();
         if((numA * numB2 - numA2 * numB) > 0){
             sB.append(numA * numA2 - numB * numB2)
                     .append("+")
@@ -71,8 +84,12 @@ public class FunctionsComplex implements CalculateComplex {
     /** divisionComplex() - Функция вычисляет выражение (A + Bi) / (A2 + B2i)
      */
 
-    public String divisionComplex(Integer numA, Integer numB, Integer numA2, Integer numB2) {
+    public String division(ArrayList<Number> list) {
         StringBuilder sB = new StringBuilder();
+        Integer numA = list.get(0).intValue();
+        Integer numB = list.get(1).intValue();
+        Integer numA2 = list.get(2).intValue();
+        Integer numB2 = list.get(3).intValue();
         if((numA2 * numB - numA * numB2) > 0){
             sB.append((double) (numA * numA2 + numB * numB2) / (numA2 * numA2 + numB2 * numB2))
                     .append("+")

@@ -9,31 +9,37 @@ import java.util.Calendar;
 import java.util.List;
 
 public class Functions implements Calculate {
-
-
-
-    public String sum(Number numA, Number numB) {
+    @Override
+    public String sum(ArrayList<Number> list) {
+        Number numA = list.get(0);
+        Number numB = list.get(1);
         double result = 0;
         result = numA.doubleValue() + numB.doubleValue();
         return numA + " + " + numB + " = " +  result;
     }
 
     @Override
-    public String subtraction(Number numA, Number numB) {
+    public String subtraction(ArrayList<Number> list) {
+        Number numA = list.get(0);
+        Number numB = list.get(1);
         double result = 0;
         result = numA.doubleValue() - numB.doubleValue();
         return numA + " - " + numB + " = " + result;
     }
 
     @Override
-    public String division(Number numA, Number numB) {
+    public String division(ArrayList<Number> list) {
+        Number numA = list.get(0);
+        Number numB = list.get(1);
         double result = 0;
         result = numA.doubleValue() / numB.doubleValue();
         return numA + " / " + numB + " = " + result;
     }
 
     @Override
-    public String multiplication(Number numA, Number numB) {
+    public String multiplication(ArrayList<Number> list) {
+        Number numA = list.get(0);
+        Number numB = list.get(1);
         double result = 0;
         result = numA.doubleValue() * numB.doubleValue();
         return numA + " * " + numB + " = " + result;

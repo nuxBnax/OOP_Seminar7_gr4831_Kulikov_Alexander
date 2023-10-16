@@ -1,13 +1,13 @@
 package Service;
 
 import model.Calculate;
-import model.CalculateComplex;
-
 import model.Logger;
 
 import view.Text;
 import view.View;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -15,13 +15,11 @@ public class Operations {
 
     public View print;
     public Calculate functions;
-    public CalculateComplex functionsComplex;
     public Logger logger;
 
-    public Operations(View print, Calculate functions, CalculateComplex functionsComplex, Logger logger) {
+    public Operations(View print, Calculate functions,  Logger logger) {
         this.print = print;
         this.functions = functions;
-        this.functionsComplex = functionsComplex;
         this.logger = logger;
     }
 
@@ -45,8 +43,8 @@ public class Operations {
                 Text.inputNumberB();
                 double numB = cs.nextDouble();
                 logger.writeHistory(logger.dateTime() +
-                        functions.sum(numA, numB));
-                print.printResult(functions.sum(numA, numB));
+                        functions.sum(new ArrayList<>(Arrays.asList(numA, numB))));
+                print.printResult(functions.sum(new ArrayList<>(Arrays.asList(numA, numB))));
                 Text.loadedToHistory();
             }
             case 2 -> {
@@ -56,8 +54,8 @@ public class Operations {
                 Text.inputNumberB();
                 double numB = cs.nextDouble();
                 logger.writeHistory(logger.dateTime() +
-                        functions.subtraction(numA, numB));
-                print.printResult(functions.subtraction(numA, numB));
+                        functions.subtraction(new ArrayList<>(Arrays.asList(numA, numB))));
+                print.printResult(functions.subtraction(new ArrayList<>(Arrays.asList(numA, numB))));
                 Text.loadedToHistory();
             }
             case 3 -> {
@@ -67,8 +65,8 @@ public class Operations {
                 Text.inputNumberB();
                 double numB = cs.nextDouble();
                 logger.writeHistory(logger.dateTime() +
-                        functions.multiplication(numA, numB));
-                print.printResult(functions.multiplication(numA, numB));
+                        functions.multiplication(new ArrayList<>(Arrays.asList(numA, numB))));
+                print.printResult(functions.multiplication(new ArrayList<>(Arrays.asList(numA, numB))));
                 Text.loadedToHistory();
             }
             case 4 -> {
@@ -78,8 +76,8 @@ public class Operations {
                 Text.inputNumberB();
                 double numB = cs.nextDouble();
                 logger.writeHistory(logger.dateTime() +
-                        functions.division(numA, numB));
-                print.printResult(functions.division(numA, numB));
+                        functions.division(new ArrayList<>(Arrays.asList(numA, numB))));
+                print.printResult(functions.division(new ArrayList<>(Arrays.asList(numA, numB))));
                 Text.loadedToHistory();
             }
             default -> Text.noThatNumber();
@@ -112,8 +110,8 @@ public class Operations {
                 Text.inputNumberB2();
                 numB2 = cs.nextInt();
                 logger.writeHistory(logger.dateTime() +
-                        functionsComplex.sumComplex(numA, numB, numA2, numB2));
-                print.printResult(functionsComplex.sumComplex(numA, numB, numA2, numB2));
+                        functions.sum(new ArrayList<>(Arrays.asList(numA, numB, numA2, numB2))));
+                print.printResult(functions.sum(new ArrayList<>(Arrays.asList(numA, numB, numA2, numB2))));
                 Text.loadedToHistory();
             }
             case 2 -> {
@@ -127,8 +125,8 @@ public class Operations {
                 Text.inputNumberB2();
                 numB2 = cs.nextInt();
                 logger.writeHistory(logger.dateTime() +
-                        functionsComplex.subtractionComplex(numA, numB, numA2, numB2));
-                print.printResult(functionsComplex.subtractionComplex(numA, numB, numA2, numB2));
+                        functions.subtraction(new ArrayList<>(Arrays.asList(numA, numB, numA2, numB2))));
+                print.printResult(functions.subtraction(new ArrayList<>(Arrays.asList(numA, numB, numA2, numB2))));
                 Text.loadedToHistory();
             }
             case 3 -> {
@@ -142,8 +140,8 @@ public class Operations {
                 Text.inputNumberB2();
                 numB2 = cs.nextInt();
                 logger.writeHistory(logger.dateTime() +
-                        functionsComplex.multiplicationComplex(numA, numB, numA2, numB2));
-                print.printResult(functionsComplex.multiplicationComplex(numA, numB, numA2, numB2));
+                        functions.multiplication(new ArrayList<>(Arrays.asList(numA, numB, numA2, numB2))));
+                print.printResult(functions.multiplication(new ArrayList<>(Arrays.asList(numA, numB, numA2, numB2))));
                 Text.loadedToHistory();
             }
             case 4 -> {
@@ -157,8 +155,8 @@ public class Operations {
                 Text.inputNumberB2();
                 numB2 = cs.nextInt();
                 logger.writeHistory(logger.dateTime() +
-                        functionsComplex.divisionComplex(numA, numB, numA2, numB2));
-                print.printResult(functionsComplex.divisionComplex(numA, numB, numA2, numB2));
+                        functions.division(new ArrayList<>(Arrays.asList(numA, numB, numA2, numB2))));
+                print.printResult(functions.division(new ArrayList<>(Arrays.asList(numA, numB, numA2, numB2))));
                 Text.loadedToHistory();
             }
             default -> Text.noThatNumber();

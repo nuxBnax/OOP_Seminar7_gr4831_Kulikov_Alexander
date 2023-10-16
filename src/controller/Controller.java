@@ -3,6 +3,7 @@ package controller;
 import Service.Operations;
 import model.Functions;
 import model.FunctionsComplex;
+import model.Logger;
 import model.Outter;
 import view.CalculationView;
 import view.Text;
@@ -18,7 +19,8 @@ public class Controller {
     public void menu() {
 
         Scanner cs = new Scanner(System.in);
-        Operations operations = new Operations(new CalculationView(), new Functions(),new FunctionsComplex(), new Outter());
+        Operations operations;
+        Logger logger = new Outter();
 
         boolean flag = true;
         while (flag) {
@@ -27,9 +29,15 @@ public class Controller {
             int num = cs.nextInt();
 
             switch (num) {
-                case 1 -> operations.subMenu();
-                case 2 -> operations.subMenuComplex();
-                case 3 -> operations.logger.readHistory();
+                case 1 ->{
+                    operations = new Operations(new CalculationView(), new Functions(), logger);
+                    operations.subMenu();
+                }
+                case 2 -> {
+                    operations = new Operations(new CalculationView(), new FunctionsComplex(), logger);
+                    operations.subMenuComplex();
+                }
+                case 3 -> logger.readHistory();
                 case 4 -> flag = false;
                 default -> Text.noThatNumber();
             }
