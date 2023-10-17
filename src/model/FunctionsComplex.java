@@ -33,8 +33,6 @@ public class FunctionsComplex implements Calculate {
         return sB.toString();
     }
 
-    /** subtractionComplex() - Функция вычисляет выражение (A + Bi) - (A2 + B2i)
-     */
 
     public String subtraction(ArrayList<Number> list) {
         StringBuilder sB = new StringBuilder();
@@ -57,8 +55,7 @@ public class FunctionsComplex implements Calculate {
         return sB.toString();
     }
 
-    /** multiplicationComplex() - Функция вычисляет выражение (A + Bi) * (A2 + B2i)
-     */
+
 
     public String multiplication(ArrayList<Number> list) {
         StringBuilder sB = new StringBuilder();
@@ -81,8 +78,6 @@ public class FunctionsComplex implements Calculate {
         return sB.toString();
     }
 
-    /** divisionComplex() - Функция вычисляет выражение (A + Bi) / (A2 + B2i)
-     */
 
     public String division(ArrayList<Number> list) {
         StringBuilder sB = new StringBuilder();

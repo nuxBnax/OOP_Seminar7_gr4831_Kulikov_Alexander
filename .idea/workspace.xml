@@ -9,9 +9,11 @@
       <change beforePath="$PROJECT_DIR$/src/Service/Operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/Operations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Calculate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/CalculateComplex.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Functions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FunctionsComplex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FunctionsComplex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CalculationView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CalculationView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +46,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Программирование/Семинары/ООП/ДЗ/Seminar6/task"
   }
 }]]></component>

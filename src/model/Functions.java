@@ -9,6 +9,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public class Functions implements Calculate {
+
     @Override
     public String sum(ArrayList<Number> list) {
         Number numA = list.get(0);

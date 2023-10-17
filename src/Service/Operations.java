@@ -24,7 +24,7 @@ public class Operations {
     }
 
     /** subMenu() - Функция предоставляет выбрать операцию с числами
-     /* (сложение, вычитание, умножение, деление)
+     * (сложение, вычитание, умножение, деление)
      */
     public void subMenu() {
         Scanner cs = new Scanner(System.in);
@@ -86,7 +86,7 @@ public class Operations {
     }
 
     /** subMenu() - Функция предоставляет выбрать операцию с комплексными числами
-     /* (сложение, вычитание, умножение, деление)
+     * (сложение, вычитание, умножение, деление)
      */
     public void subMenuComplex() {
         Scanner cs = new Scanner(System.in);
@@ -161,7 +161,5 @@ public class Operations {
             }
             default -> Text.noThatNumber();
         }
-
     }
-
 }
